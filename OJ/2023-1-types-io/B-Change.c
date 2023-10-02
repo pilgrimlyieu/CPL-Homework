@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int rmb;
     scanf("%d", &rmb);
     int rmb_in_50 = rmb / 50;

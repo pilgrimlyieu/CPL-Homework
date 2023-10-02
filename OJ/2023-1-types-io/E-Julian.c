@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
     int year, month, day;
     scanf("%d %d %d", &year, &month, &day);
     int a = (14 - month) / 12;
