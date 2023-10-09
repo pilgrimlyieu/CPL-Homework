@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 int main(void) {
-    int max, sum = 0, largest = 0;
+    int max, student, sum = 0, largest = 0;
     scanf("%d", &max);
-    int students[max];
     for (int i = 0; i <= max; i++) {
-        scanf("%d", &students[i]);
+        scanf("%d", &student);
         if (i - sum > largest) {
             largest = i - sum;
         }
-        sum += students[i];
+        sum += student;
     }
     printf("%d", largest);
     return 0;

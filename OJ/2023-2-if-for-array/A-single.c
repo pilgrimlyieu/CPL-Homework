@@ -8,7 +8,7 @@ int main(void) {
         scanf("%d", &temp);
         array[temp] = (array[temp] != -1) ? -1 : -2;
     }
-    for (int i = 1; i <= 10 * n; i ++) {
+    for (int i = 1; i <= 10 * n; i++) {
         if (array[i] == -1) {
             printf("%d", i);
             return 0;
