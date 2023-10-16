@@ -6,10 +6,7 @@ int main(void) {
     char str[n];
     scanf("%s", str);
     for (int i = 0; i < n; i++) {
-        if (str[i] == '?') {
-            str[i] = str[n - 1 - i];
-        }
+        printf("%c", (str[i] == '?') ? str[n - 1 - i] : str[i]);
     }
-    printf("%s", str);
     return 0;
 }
