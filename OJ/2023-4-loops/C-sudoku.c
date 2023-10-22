@@ -2,14 +2,12 @@
 
 int main(void) {
     int sodoku[81], error = 0, middles[9] = { 10, 13, 16, 37, 40, 43, 64, 67, 70 };
-    for (int i = 0; i < 81; i++) {
+    for (int i = 0; i < 81; i++)
         scanf("%d", &sodoku[i]);
-    }
     for (int i = 0; i < 9; i++) {
         int nums[9] = { 0 };
-        for (int j = i; j < 81; j += 9) {
+        for (int j = i; j < 81; j += 9)
             nums[sodoku[j] - 1]++;
-        }
         for (int j = 0; j < 9; j++) {
             if (nums[j] != 1) {
                 error = 1;
@@ -19,9 +17,8 @@ int main(void) {
     }
     for (int i = 0; i < 81; i += 9) {
         int nums[9] = { 0 };
-        for (int j = i; j < i + 9; j++) {
+        for (int j = i; j < i + 9; j++)
             nums[sodoku[j] - 1]++;
-        }
         for (int j = 0; j < 9; j++) {
             if (nums[j] != 1) {
                 error = 1;

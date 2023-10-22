@@ -21,8 +21,8 @@ int main(void) {
                     count[1]++;
             }
             if (pre[j] == '.') {
-                next[j] = (count[0] == 0 && 2 <= count[1] && count[1] <= 4) ? 'B' :\
-                          (count[1] == 0 && 2 <= count[0] && count[0] <= 4) ? 'A' :\
+                next[j] = (count[0] == 0 && 2 <= count[1] && count[1] <= 4) ? 'B' :
+                          (count[1] == 0 && 2 <= count[0] && count[0] <= 4) ? 'A' :
                                                                               '.';
             }
             else {
