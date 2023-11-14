@@ -15,4 +15,5 @@ int main(void) {
         scanf("%d", &a[i]);
     for (int i = 1; i <= n; i++)
         printf("%d ", poi(i, a));
+    return 0;
 }

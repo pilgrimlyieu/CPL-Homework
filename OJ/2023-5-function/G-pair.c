@@ -37,22 +37,22 @@ int main(void) {
             a_index--;
             continue;
         }
-        while (b_low <= b_high) {
-            int b_mid = (b_low + b_high) / 2;
-            if (b[b_mid] > t) {
-                b_high = b_mid - 1;
-                continue;
+            while (b_low <= b_high) {
+                int b_mid = (b_low + b_high) / 2;
+                if (b[b_mid] > t) {
+                    b_high = b_mid - 1;
+                    continue;
+                }
+                int sum = a[a_index] + b[b_mid];
+                if (sum <= t) {
+                    int minus = t - sum;
+                    if (minus <= min)
+                        min = minus;
+                    b_low = b_mid + 1;
+                }
+                else
+                    b_high = b_mid - 1;
             }
-            int sum = a[a_index] + b[b_mid];
-            if (sum <= t) {
-                int minus = t - sum;
-                if (minus <= min)
-                    min = minus;
-                b_low = b_mid + 1;
-            }
-            else
-                b_high = b_mid - 1;
-        }
         a_index--;
     }
     printf("%d", (min == t) ? -1 : min);

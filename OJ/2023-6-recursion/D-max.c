@@ -26,4 +26,5 @@ int main(void) {
     Max(0, n - 1, a, b);
     for (int i = 0; i < n; i++)
         printf("%d %d\n", b[i][0] + 1, b[i][1] + 1);
+    return 0;
 }

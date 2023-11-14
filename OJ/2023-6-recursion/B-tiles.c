@@ -13,4 +13,5 @@ int main(void) {
     int n;
     scanf("%d", &n);
     printf("%d", tiles(n));
+    return 0;
 }
