@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
 set(CMAKE_CXX_STANDARD 17)
 project(CPL C)
-set(CMAKE_C_FLAGS "-std=c17 -lm -march=native -O2 -fno-strict-aliasing -Wall -DONLINE_JUDGE")
+set(CMAKE_C_FLAGS "-std=c17 -lm -march=native -fno-strict-aliasing -Wall -DONLINE_JUDGE")
 file(GLOB files Exam/*/*.c)
 foreach (file ${files})
     string(REGEX REPLACE ".+/(.+)/(.+)\\..*" "\\1.\\2" exe "${file}")
