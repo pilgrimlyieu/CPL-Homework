@@ -9,9 +9,8 @@ int main(void) {
     scanf("%d %d %d", &n, &m, &d);
     int a[n + 2 * d][m + 2 * d], vs[n][m];
     for (int i = 0; i < n + 2 * d; i++) {
-        for (int j = 0; j < m + 2 * d; j++) {
+        for (int j = 0; j < m + 2 * d; j++)
             a[i][j] = 0;
-        }
     }
     for (int i = d; i < n + d; i++) {
         for (int j = d; j < m + d; j++)

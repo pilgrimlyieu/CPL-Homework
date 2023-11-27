@@ -9,9 +9,8 @@ int main(void) {
         char action[6];
         scanf("%s", action);
         if (strcmp(action, "push") == 0) {
-            char m;
             getchar();
-            m = getchar();
+            char m = getchar();
             stack[index++] = m;
         }
         else if (strcmp(action, "pop") == 0) {
