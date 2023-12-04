@@ -3,7 +3,7 @@
 
 int main(void) {
     char *haystack = malloc(100005), *needle = malloc(100005);
-    int h= -1, n = -1;
+    int h = -1, n = -1;
     while (scanf("%c", haystack + ++h) != EOF && *(haystack + h) != '\n');
     while (scanf("%c", needle + ++n) != EOF && *(needle + n) != '\n');
     for (int i = 0; i < h; i++) {
