@@ -25,8 +25,7 @@ int main(void) {
     int T;
     scanf("%d", &T);
     while (T--) {
-        char *str1 = malloc(1000 * sizeof(str1));
-        char *str2 = malloc(1000 * sizeof(str2));
+        char *str1 = malloc(1000 * sizeof(str1)), *str2 = malloc(1000 * sizeof(str2));
         scanf("%s %s", str1, str2);
         mystrcat(str1, str2);
     }

@@ -7,16 +7,14 @@ void interleaveString(char* s1, char* s2, int d1, int d2, int size) {
     int len = 0, len1 = strlen(s1), len2 = strlen(s2);
     while (1) {
         if (len == size - 1 || (idx1 >= s1 + len1 && idx2 >= s2 + len2))
-            goto finish;
+            break;
         int l1 = (idx1 + d1 > s1 + len1) ? len1 - (idx1 - s1) : d1;
-        for (int _ = 0; _ < l1; _++) {
-            *(s + len++) = *(idx1++);
+        for (int _ = 0; _ < l1; _++, *(s + len++) = *(idx1++)) {
             if (len == size - 1)
                 goto finish;
         }
         int l2 = (idx2 + d2 > s2 + len2) ? len2 - (idx2 - s2) : d2;
-        for (int _ = 0; _ < l2; _++) {
-            *(s + len++) = *(idx2++);
+        for (int _ = 0; _ < l2; _++, *(s + len++) = *(idx2++)) {
             if (len == size - 1)
                 goto finish;
         }

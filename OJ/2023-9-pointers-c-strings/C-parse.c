@@ -4,12 +4,8 @@
 
 int valid(char param, const char *parse, int len) {
     for (int i = 0; i < len; i++) {
-        if (*(parse + i) == param) {
-            if (*(parse + i + 1) == ':')
-                return 2;
-            else
-                return 1;
-        }
+        if (*(parse + i) == param)
+            return (*(parse + i + 1) == ':') ? 2 : 1;
     }
     return 0;
 }
@@ -27,7 +23,7 @@ int main(void) {
         switch (valid(token[1], parse, len)) {
             case 0:
                 printf("%s: invalid option -- '%c'\n", name, token[1]);
-                goto finish;
+                return 0;
             case 1:
                 strcat(msg, token + 1);
                 strcat(msg, "\n");
@@ -36,7 +32,7 @@ int main(void) {
                 char *param = malloc(1024 * sizeof(param));
                 if (scanf("%s", param) == EOF) {
                     printf("%s: option requires an argument -- '%c'\n", name, token[1]);
-                    goto finish;
+                    return 0;
                 }
                 else {
                     strcat(msg, token + 1);
@@ -49,6 +45,5 @@ int main(void) {
         }
     }
     printf("%s", msg);
-    finish:
     return 0;
 }
