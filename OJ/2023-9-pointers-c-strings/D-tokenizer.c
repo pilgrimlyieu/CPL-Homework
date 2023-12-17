@@ -50,24 +50,12 @@ void process(char *str, char *msg) {
     if (str[0] == '\0')
         return;
     switch (what(str)) {
-        case 0:
-            printf("Compile Error");
-            exit(0);
-        case 1:
-            strcat(msg, "reserved ");
-            break;
-        case 2:
-            strcat(msg, "operator ");
-            break;
-        case 3:
-            strcat(msg, "variable ");
-            break;
-        case 4:
-            strcat(msg, "integer ");
-            break;
-        case 5:
-            strcat(msg, "float ");
-            break;
+        case 0: printf("Compile Error"); exit(0);
+        case 1: strcat(msg, "reserved "); break;
+        case 2: strcat(msg, "operator "); break;
+        case 3: strcat(msg, "variable "); break;
+        case 4: strcat(msg, "integer ");  break;
+        case 5: strcat(msg, "float ");    break;
     }
 }
 

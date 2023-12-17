@@ -11,15 +11,15 @@ void interleaveString(char* s1, char* s2, int d1, int d2, int size) {
         int l1 = (idx1 + d1 > s1 + len1) ? len1 - (idx1 - s1) : d1;
         for (int _ = 0; _ < l1; _++, *(s + len++) = *(idx1++)) {
             if (len == size - 1)
-                goto finish;
+                break;
+
         }
         int l2 = (idx2 + d2 > s2 + len2) ? len2 - (idx2 - s2) : d2;
         for (int _ = 0; _ < l2; _++, *(s + len++) = *(idx2++)) {
             if (len == size - 1)
-                goto finish;
+                break;
         }
     }
-    finish:
     *(s + len) = '\0';
     puts(s);
 }
