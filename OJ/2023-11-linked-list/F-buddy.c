@@ -67,4 +67,5 @@ int main(void) {
             finish:
         }
     }
+    return 0;
 }
